@@ -1,24 +1,23 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import Header from '../../components/Header';
-import { Counter } from '../../features/counter/Counter';
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
 
 export const App = () => {
-  return (
-    <View style={styles.container}>
-      <Header />
-      <Counter />
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <View style = {styles.container}>
+            <Text style = {styles.text}>New fresh app!</Text>
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    text: {
+        fontSize: 18,
+        fontWeight: '400',
+    },
 });

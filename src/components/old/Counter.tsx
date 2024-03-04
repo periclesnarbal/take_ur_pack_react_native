@@ -6,15 +6,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {useAppDispatch, useAppSelector} from '../../store/hooks';
-import {AsyncButton} from '../../components/AsyncButton';
+import {useAppDispatch, useAppSelector} from '../../store/old';
+import {AsyncButton} from './AsyncButton';
 import {
   decrement,
   increment,
   incrementAsync,
   incrementByAmount,
   selectCount,
-} from './counterSlice';
+} from '../../store/old/counterSlice';
 
 export function Counter() {
   const [incrementAmount, setIncrementAmount] = useState('2');
