@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './src/store/store';
-import { App } from './src/screens/home';
+import { App } from './src/screens';
 
 const MainApp = () => (
   // <Provider store={store}>
