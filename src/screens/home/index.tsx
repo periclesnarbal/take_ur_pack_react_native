@@ -1,13 +1,15 @@
-import { StyleSheet, Button, View, Text } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { View, Image, StyleSheet } from "react-native";
+import StyledText from "../../components/StyledText";
 
 function Home() {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>You are at Home screen</Text>
-      <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
+      <StyledText title='Toque no botão "Acionar Câmera" e aponte a câmera traseira do seu celular para a parte superior do pacote, onde estão as informações necessárias para o reconhecimento.' style={styles.text} />
+      <Image
+        source={require("../../../assets/images/box-camera-frame.png")}
+        style={styles.image}
+      />
+      <StyledText title="Quando encontrar um bom enquadramento tire uma foto e aguarde a validação." style={styles.text} />
     </View>
   );
 }
@@ -15,13 +17,19 @@ function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
   },
   text: {
-    fontSize: 18,
-    fontWeight: "400",
+    fontFamily: "SFProDisplay-Regular",
+    fontSize: 20,
+    color: "#2D0C57",
+  },
+  image: {
+    width: 200,
+    height: 200,
+    resizeMode: "contain",
   },
 });
 
