@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   camera_icon: {
     width: 24,
     height: 24,
-    color: "white",
+    tintColor: "white",
   },
 });
 
