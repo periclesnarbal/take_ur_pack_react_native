@@ -9,6 +9,7 @@ SplashScreen.preventAutoHideAsync();
 const StyledText = ({ title, style }: { title: string; style?: TextStyle }) => {
   const [fontsLoaded, fontError] = useFonts({
     'SFProDisplay-Regular': require('../../assets/fonts/SFProDisplay/SF-Pro-Display-Regular.otf'),
+    'SFProDisplay-Bold': require('../../assets/fonts/SFProDisplay/SF-Pro-Display-Bold.otf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
