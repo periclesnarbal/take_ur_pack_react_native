@@ -1,12 +1,18 @@
-import React from "react";
-import { View, Image, TouchableOpacity, StyleSheet, Alert } from "react-native";
-import StyledText from "../../components/StyledText";
+import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const cameraButtonAction = () => {
-    Alert.alert('Botão da câmera pressionado!');
-}
+import StyledText from "../../components/StyledText";
+import { StackTypes } from "../../routes/routes";
 
 function Home() {
+
+  const navigation = useNavigation<StackTypes>();
+  
+  const cameraButtonAction = () => {
+    console.log("pressionou botao da camera");
+    navigation.navigate("Camera");
+  };
+
   return (
     <View style={styles.container}>
       <StyledText
